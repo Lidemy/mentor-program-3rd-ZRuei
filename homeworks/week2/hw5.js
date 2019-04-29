@@ -1,10 +1,18 @@
-function join(str, concatStr) {
-  return concatStr;
+function strJoin(str, concatStr) {
+  let newStr = str[0];
+  for (let i = 1; i < str.length; i += 1) {
+    newStr += concatStr + str[i];
+  }
+  return newStr;
 }
 
-function repeat(str, times) {
-  return times;
+function strRepeat(str, times) {
+  let result = '';
+  for (let i = 1; i <= times; i += 1) {
+    result += str;
+  }
+  return result;
 }
 
-console.log(join('a', '!'));
-console.log(repeat('a', 5));
+console.log(strJoin(['a', 1, 'b', 2, 'c', 3], ''));
+console.log(strRepeat('a', 5));
