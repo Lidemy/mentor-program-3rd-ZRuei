@@ -11,3 +11,4 @@ CLI 是 command line interface 的簡稱，是一種操作電腦的介面。
 4. 輸入```mkdir wifi``` 來建立新資料夾 wifi
 5. 輸入```touch afu.js```來新增檔案
 6. 利用```ls```查看是否成功新增資料夾以及檔案
+

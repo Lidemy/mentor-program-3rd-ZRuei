@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input, button{
+    outline: none;
+}
+body{
+    background-color: rgba(245, 235, 201, 0.4);
+}
+
+.head__banner{
+    background-color: black;
+    background-image: url(https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.form__wrapper{
+    max-width: 640px;
+    height: auto;
+    padding: 40px 18px 50px 18px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: -64px auto 60px auto;
+    border-top: 10px solid #49ADE5;
+}
+.form__title{
+    font-size: 34px;
+    line-height: 1.5em;
+    padding-left: 15px; 
+}
+.form__detail{
+    font-size: 13px;
+    line-height: 2em;
+    margin: 22px 0;
+    padding-left: 15px; 
+}
+
+.form__detail p:last-child{
+    color: #d93025;
+}
+
+.form__content{
+    margin: 2px 0;
+    padding: 15px;
+}
+.form__content p{
+    font-size: 13px;
+    line-height: 135%;
+}
+
+.c-title{
+    font-size: 20px;
+    line-height: 1.5em;
+}
+.c-title span{
+    color: #d93025;
+    font-size: 20px;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+input[type="text"], input[type="email"]{
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin-top: 15px;
+    background: transparent;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    transition: border-bottom 0.25s linear;
+}
+input.input-1-2-b{
+    width: 50%;
+}
+input::placeholder{
+    font-size: 16px;
+    padding: 1.2px 0;
+    color: rgb(164, 164, 164);
+}
+
+input:focus{
+    border-bottom: 2px solid #d93025;
+}
+
+input[type="radio"]{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-51%);
+    left: 4px;
+
+    opacity: 0;
+    z-index: 10;
+} 
+
+
+.classtype__check{
+    position: relative;
+}
+
+.classtype__check-outer{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    border: 2px solid gray;
+    cursor: pointer;
+}
+.classtype__check-outer:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    z-index: 11;
+
+	transition: background 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+input[type=radio]:checked ~ .classtype__check-outer{
+    border: 2px solid #d93025;
+}
+
+input[type=radio]:checked ~ .classtype__check-outer::before{
+    background-color: #d93025;
+}
+
+.classtype__opt{
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 0 10px 30px;
+    cursor: pointer;
+}
+
+
+button{
+    background-color: #1973e7;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin:35px 15px 20px 15px;
+    padding: 8px 30px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+}
+
+.submit-notice{
+    font-size: 8px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 15px; 
+}
+
+.footer__info{
+    text-align: center;
+    font-size: 12px;
+    margin: 16px 0;
+}
+.footer__info a{
+    color: black;
+    cursor: pointer;
+}
+.footer__info-logo{
+    margin: 30px 0;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.footer__info-logo span{
+    font-size: 18px;
+    padding-left: 10px; 
+    vertical-align: top;
+}
+.footer__problem-icon{
+    position: fixed;
+    bottom: 13px;
+    left: 13px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.footer__problem-icon:hover::after{
+    content: '向 Google 回報問題';
+    vertical-align: top;
+    font-size: 12px;
+    padding: 8px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+.js-form{
+    background-color: #fce8e6; 
+}
+
+.js-form::after{
+    content: "這是必填問題";
+    line-height: 35px;
+    color: #d93025;
+    font-weight: 500px;
+}
