@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: auto;
+  background: #DCDDDE;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(54, 77, 66);
+}
+
+/* --- warning --- */
+
+.alert {
+  color: rgb(194, 58, 58);
+}
+
+/* -- navigation bar -- */
+
+nav {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 1px 5px #584a37;
+  background-color: #DCDDDE;
+}
+.navbar {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-l,
+.navbar-r {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navbar-r {
+  justify-content: flex-end;
+}
+.navbar__item {
+  margin: 5px;
+}
+
+/* -- login & register -- */
+
+.container {
+  margin-top: 100px;
+}
+.title {
+  white-space: nowrap; 
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 50px; 
+}
+h2, p {
+  padding: 10px;
+  color: #5D8673;
+  text-align: center;
+}
+.form {
+  margin: 20px auto;
+  padding: 20px;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+.form__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__input,
+.form__submit {
+  width: 235px;
+  height: 55px;
+}
+.form__submit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 8px;
+}
+input { 
+  padding: 6px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 20px;
+}
+input[type="text"], input[type="password"] {
+  border: 1.5px solid #5D8673;
+  background-color: #DCDDDE;
+  
+}
+input[type="submit"] {
+  width: 175px;
+  background-color: #DCDDDE;
+  box-shadow: 1px 1px 4px #584a37;
+}
+
+/* -- main page -- */
+
+h4 {
+  color: rgb(54, 77, 66);
+  margin-right: 10px;
+}
+.message__form, 
+.comment {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.message__form {
+  text-align: right;
+}
+.message__content,
+.comment {
+  padding: 8px;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  margin: 20px 0px 10px 0px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 5px gray inset;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .8);
+  font-size: 16px;
+  line-height: 1.5em;
+}
+textarea::placeholder {
+  color: rgb(101, 101, 101);
+  font-size: 16px;
+  font-weight: 200;
+}
+.comment__wrapper {
+  padding: 8px;
+  border-left: 8px solid #5D8673;
+  border-right: 8px solid rgba(255, 255, 255, 0);
+  box-shadow: 2px 2px 5px gray; 
+  background: #dcddde;
+  margin: 15px auto;
+}
+.comment__info,
+.comment_content {
+  padding: 10px;
+  margin: 5px;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+.comment__info {
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
