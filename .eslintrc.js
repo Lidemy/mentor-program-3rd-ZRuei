@@ -22,4 +22,5 @@ module.exports = {
   rules: {
     "no-console": "off"
   },
+  extends: 'jquery'
 };
