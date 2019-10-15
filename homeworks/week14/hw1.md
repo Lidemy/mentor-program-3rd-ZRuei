@@ -1,0 +1,1 @@
+![hw1_短網址說明圖](/Users/Ruei/Documents/LidemyHomework/mentor-program-3rd-ZRuei/homeworks/week14/hw1_短網址說明圖.jpeg)
