@@ -1,0 +1,24 @@
+@function toRem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+%ff-serif {
+  font-family: serif;
+}
+%ff-sans-serif {
+  font-family: sans-serif;
+}
+@mixin display-flex($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
