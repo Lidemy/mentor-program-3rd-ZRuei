@@ -1,0 +1,349 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+/* --- 刊頭 --- */
+nav {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: map-get($color, nav-bg);
+  z-index: 100;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+}
+.nav__wrapper {
+  @include display-flex(space-between, center);
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.nav__logo {
+  @include display-flex(center, center);
+  @extend %cursor-pointer;
+  &--pipe {
+    border: 0.5px solid rgb(208, 207, 207);
+    width: 0.5px;
+    height: 30px;
+    margin: 0 15px;
+  }
+  &--blog-name {
+    font-family: "Franklin Gothic Medium";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 37px;
+  }
+}
+.nav__button {
+  font-family: "Arial";
+  width: 179px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  font-size: $base-font-size;
+  color: map-get($color ,btn);
+  @extend %cursor-pointer;
+  &--sign-in-btn {
+    line-height: 22px;
+  }
+  &--get-start-btn {
+    height: 37px;
+    text-align: center;
+    box-sizing: border-box;
+
+    border: 0.5px solid map-get($color, btn-border);
+    font-weight: 400;
+    line-height: 37px;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+}
+
+/* -- main content -- */
+main {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  max-width: 740px;
+  margin: 120px auto;
+}
+
+article {
+  overflow: hidden;
+  font-weight: 300;
+  padding: 0 20px;
+}
+.article__title {
+  @extend %ff-serif;
+  font-size: toRem(40px);
+  line-height: 1.5;
+  margin: 20px 0;
+  color: map-get($color, title);
+}
+.article__author {
+  &--avatar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 25px;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: map-get($color, main);
+  }
+  &--name,
+  &--follow-btn {
+    display: inline-block;
+  }
+  &--follow-btn .follow-btn {
+    height: toRem(20px);
+    line-height: toRem(20px);
+    margin-left: 10px;
+  }
+}
+.article__main {
+  @extend %ff-serif;
+  font-size: toRem(20px);
+  line-height: 1.5;
+
+  blockquote {
+    @extend %ff-serif;
+    font-size: toRem(28px);
+    font-style: italic;
+    padding-left: 50px;
+    line-height: 1.5;
+  }
+
+  h3 {
+    @extend %ff-sans-serif;
+    font-size: toRem(32px);
+    font-weight: 600;
+    margin: 56px 0 5px 0;
+    color: map-get($color, main);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &--caption {
+    font-family: "Arial";
+    font-size: $base-font-size;
+    text-align: center;
+    margin: 10px;
+    color: map-get($color, info);
+  }
+  &--tag > ul {
+    padding: 20px;
+    > li {
+      display: inline-block;
+      padding-right: 3px;
+      a.tag {
+        text-decoration: none;
+        font-size: $base-font-size;
+        border-radius: 1px;
+        padding: 5px 12px;
+        background: map-get($color, tag-bg);
+        color: map-get($color, info);
+      }
+    }
+  }
+}
+
+hr {
+  border: 0px;
+  background: map-get($color, info);
+  height: 1px;
+  margin: 1.5em 0;
+}
+
+.article__bottom--author-info,
+.author-info__avatar,
+.author-info__avatar-pub,
+.author-info__detail,
+.author-info__follow-btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.article__bottom--author-info {
+  width: 48%;
+  height: auto;
+  margin: 10px auto;
+  padding: 0 5px;
+  white-space: nowrap;
+  .author-info__detail {
+    width: 49%;
+    height: auto;
+    padding: 0 15px;
+    white-space: normal;
+    h5 {
+      font-family: "Franklin Gothic Medium";
+      font-size: toRem(20px);
+      color: map-get($color, info-title);
+      font-weight: 600;
+      margin: 0;
+    }
+    h6 {
+      font-size: 15px;
+      line-height: 20px;
+      color: map-get($color, info);
+      margin: 0;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 20px;
+    }
+  }
+  .author-info__avatar,
+  .author-info__avatar-pub {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: map-get($color, info);
+    &-pub {
+      border-radius: 2px;
+    }
+  }
+}
+
+
+/* -- aside info -- */
+aside {
+  max-width: 740px;
+  position: fixed;
+  top: 0px;
+}
+.aside__info {
+  position: absolute;
+  top: 180px;
+  left: -160px;
+  width: 130px;
+  > .follow-btn {
+    margin-top: 15px;
+  }
+  &--title {
+    font-family: "Franklin Gothic Medium";
+    font-size: 20px;
+    line-height: 30px;
+    color: map-get($color, info-title);
+  }
+  &--detail {
+    font-size: $base-font-size;
+    line-height: 20px;
+    color: rgb(143, 142, 142);
+    letter-spacing: 1.5;
+  }
+  &--icons {
+    text-align: left;
+    @extend %cursor-pointer;
+    ul {
+      margin: 0;
+      padding: 0;
+      &-clap::after {
+        vertical-align: 50%;
+        content: "1.4K";
+        font-size: toRem(14px);
+      }
+      &-clap-svg {
+        fill: map-get($color, btn-border);
+      }
+    }
+  }
+}
+
+.follow-btn {
+  font-family: "Arial";
+  font-size: $base-font-size;
+  width: 67px;
+  height: 32px;
+  line-height: 2;
+  text-align: center;
+  border-radius: 4px;
+  color: map-get($color, btn);
+  border: 0.5px solid map-get($color, btn-border);
+  @extend %cursor-pointer;
+}
+
+// TODO icons 樣式整理
+.icons__social {
+  margin-top: 5px;
+}
+.icons__clap-b,
+.icons__social-b,
+.icons__clap-svg-o,
+.icons__clap-count {
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px auto;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.icons__clap-svg-o {
+  box-sizing: border-box;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 0.5px solid map-get($color, btn-border);
+}
+svg.icons__clap-svg-b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icons__clap-count {
+  width: 68%;
+}
+.icons__social-b {
+  text-align: right;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1060px) {
+  aside {
+    display: none;
+  }
+  blockquote {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 735px) {
+  .icons__social-b {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .article__author-info {
+    width: 100%;
+    display: block;
+  }
+
+  .icons__social-b {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  blockquote {
+    padding-left: 30px;
+  }
+  .nav__logo--blog-name,
+  .nav__button--sign-in-btn {
+    display: none;
+  }
+  .nav__button {
+    @include display-flex(flex-end, center);
+  }
+}
